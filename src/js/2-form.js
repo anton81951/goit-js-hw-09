@@ -10,7 +10,7 @@ form.addEventListener("input", (evt) => {
   const message = form.elements.message.value.trim();
   const infoObject = { email, message };
   localStorage.setItem(localStorageKey, JSON.stringify(infoObject));
-});
+}); 
 
 form.addEventListener("submit", (evt) => {
   evt.preventDefault();
