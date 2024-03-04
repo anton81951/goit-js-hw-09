@@ -76,15 +76,8 @@ const images = [
 
     gallery.insertAdjacentHTML("beforeend", markup);
 
-    const lightbox = $('.gallery a').simpleLightbox({
-        caption: true,
+    const lightbox = new SimpleLightbox('.gallery a', {
         captionsData: 'alt',
-        closeText: 'Close',
-        onShow: function(){
-            const altText = $('.sl-image img').attr('alt');
-            setTimeout(function(){
-                $('.sl-caption').text(altText);
-            }, 250);
-        }
+        captionDelay: 250,
     });
 
